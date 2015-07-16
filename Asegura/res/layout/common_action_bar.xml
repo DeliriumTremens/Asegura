@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/rlActionBar"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:background="@android:color/black">
+
+    <ImageButton android:id="@+id/imgBnAction"
+                 android:layout_width="30dp"
+                 android:layout_height="30dp"
+                 android:layout_alignParentRight="true"
+                 android:layout_alignParentEnd="true"
+                 android:layout_alignParentTop="true"
+                 android:background="@android:color/transparent"
+                 android:scaleType="fitCenter"
+                 android:contentDescription="@string/none"
+                 android:onClick="onActionButtonClickEvent"/>
+
+    <TextView android:id="@+id/tvTitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignBottom="@+id/imgBnAction"
+              android:layout_centerHorizontal="true"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@color/themeWhite" />
+
+    <ImageButton android:id="@+id/imgBnToggle"
+                 android:layout_width="20dp"
+                 android:layout_height="20dp"
+                 android:layout_alignParentLeft="true"
+                 android:layout_alignParentStart="true"
+                 android:layout_alignParentTop="true"
+                 android:background="@android:color/transparent"
+                 android:scaleType="fitCenter"
+                 android:onClick="onToggleButtonClickEvent"
+                 android:src="@drawable/common_drawer_icon" 
+                 android:contentDescription="@string/none"
+                 android:layout_marginTop="5dp"/>
+
+</RelativeLayout>

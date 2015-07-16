@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lorant.mobile.android"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    
+    <uses-feature  android:glEsVersion="0x00020000"
+                       android:required="true"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    
+    
+    <uses-sdk android:minSdkVersion="14"
+              android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <permission android:name="com.lorant.mobile.android.permission.C2D_MESSAGE"
+                android:protectionLevel="signature" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.lorant.mobile.android.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    
+    
+    <application android:allowBackup="true"
+                 android:icon="@drawable/ic_launcher"
+                 android:label="@string/app_name"
+                 android:theme="@android:style/Theme.Holo.Light">
+       <meta-data android:name="com.facebook.sdk.ApplicationId" 
+                  android:value="\ 926130947426836"/>
+       <meta-data android:name="com.google.android.gms.version"
+                  android:value="@integer/google_play_services_version" />
+       <meta-data android:name="com.google.android.maps.v2.API_KEY"
+                  android:value="AIzaSyCUV1siHmtKMQLS7HR226rUW3vL6JNMXck"/>
+       
+       <receiver  android:name="com.lorant.mobile.android.service.CalendarReminderReceiver">
+          <intent-filter>
+            <action android:name="android.intent.action.EVENT_REMINDER" />
+            <data android:scheme="content"/>
+          </intent-filter>
+        </receiver>
+
+        <activity android:name="com.lorant.mobile.android.ui.view.Launcher"
+                  android:label="@string/app_name"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        
+        
+        <activity android:name="com.facebook.LoginActivity"
+                  android:label="@string/app_name" />
+        <activity android:name="com.lorant.mobile.android.ui.view.Login"  
+                  android:configChanges="orientation"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:name="com.lorant.mobile.android.ui.view.Registration" 
+                  android:configChanges="orientation"/>
+        <activity android:name="com.lorant.mobile.android.ui.view.Menu"   
+                  android:configChanges="orientation"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+        </activity>
+        <activity android:name="com.lorant.mobile.android.ui.view.ReportDetail" 
+                  android:configChanges="orientation">
+            <meta-data android:name="hasLateralMenu"  android:value="true" />
+        </activity>
+        <activity android:name="com.lorant.mobile.android.ui.view.Dealers" 
+                  android:configChanges="orientation">
+            <meta-data android:name="hasLateralMenu" android:value="true" />
+        </activity>
+        <activity android:name="com.lorant.mobile.android.ui.view.PolicyList" 
+                  android:configChanges="orientation">
+            <meta-data android:name="hasLateralMenu" android:value="true" />
+        </activity>
+        <activity android:name="com.lorant.mobile.android.ui.view.PolicyMenu" 
+                  android:configChanges="orientation">
+            <meta-data android:name="hasLateralMenu" android:value="true" />
+        </activity>
+        <activity android:name="com.lorant.mobile.android.ui.view.PolicyDetail" 
+                  android:configChanges="orientation">
+            <meta-data android:name="hasLateralMenu" android:value="true" />
+        </activity>
+        <activity android:name="com.lorant.mobile.android.ui.view.PolicyAdditional" 
+                  android:configChanges="orientation">
+            <meta-data android:name="hasLateralMenu" android:value="true" />
+        </activity>
+        <activity android:name="com.lorant.mobile.android.ui.view.NotificationsList" 
+                  android:configChanges="orientation">
+            <meta-data android:name="hasLateralMenu" android:value="true" />
+        </activity>
+        <activity android:name="com.lorant.mobile.android.ui.view.CalendarTracker" 
+                  android:configChanges="orientation">
+            <meta-data android:name="hasLateralMenu" android:value="true" />
+        </activity>
+        <activity android:name="com.lorant.mobile.android.ui.view.About" 
+                  android:configChanges="orientation">
+            <meta-data android:name="hasLateralMenu" android:value="true" />
+        </activity>
+        <activity android:name="com.lorant.mobile.android.ui.view.Quotation" 
+                  android:configChanges="orientation">
+            <meta-data android:name="hasLateralMenu" android:value="true" />
+        </activity>
+        <activity android:name="com.lorant.mobile.android.ui.view.Tips" 
+                  android:configChanges="orientation">
+            <meta-data android:name="hasLateralMenu" android:value="true" />
+        </activity>
+        <activity android:name="com.lorant.mobile.android.ui.view.TipDescription" 
+                  android:configChanges="orientation">
+            <meta-data android:name="hasLateralMenu" android:value="true" />
+        </activity>
+        <activity android:name="com.lorant.mobile.android.ui.view.ReportNotes" 
+                  android:configChanges="orientation">
+            <meta-data android:name="hasLateralMenu" android:value="true" />
+        </activity>
+        <activity android:name="com.lorant.mobile.android.ui.view.ReportHistorical" 
+                  android:configChanges="orientation">
+            <meta-data android:name="hasLateralMenu" android:value="true" />
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,140 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.lorant.mobile.android.ui.view.Login" >
+    
+	<ImageView android:id="@+id/ivBackground"
+               android:layout_width="200dp"
+               android:layout_height="300dp"
+               android:layout_alignParentBottom="true"
+               android:layout_alignParentRight="true"
+               android:layout_alignParentEnd="true"
+               android:layout_marginBottom="16dp"
+               android:src="@drawable/common_brand_alpha_red" 
+               android:contentDescription="@string/none"/>
+
+	<ImageView android:id="@+id/imgAseguraBrand"
+               android:layout_width="270dp"
+               android:layout_height="170dp"
+               android:layout_alignParentTop="true"
+               android:layout_centerHorizontal="true"
+               android:src="@drawable/login_brand_asegura" 
+               android:contentDescription="@string/none"/>
+
+	<ImageView android:id="@+id/imgCamsaBrand"
+               android:layout_width="100dp"
+               android:layout_height="80dp"
+               android:layout_alignParentBottom="true"
+               android:layout_toRightOf="@+id/imgLorantBrand"
+               android:layout_toEndOf="@+id/imgLorantBrand"
+               android:src="@drawable/login_brand_camsa" 
+               android:contentDescription="@string/none"/>
+
+	<ImageView android:id="@+id/imgLorantBrand"
+               android:layout_width="150dp"
+               android:layout_height="80dp"
+               android:layout_alignParentBottom="true"
+               android:layout_alignRight="@+id/imgRedBorder"
+               android:layout_alignEnd="@+id/imgRedBorder"
+               android:layout_marginRight="17dp"
+               android:layout_marginEnd="17dp"
+               android:src="@drawable/login_brand_lorant" 
+               android:contentDescription="@string/none"/>
+
+	<EditText android:id="@+id/etPassword"
+	          android:layout_width="250dp"
+	          android:layout_height="wrap_content"
+	          android:layout_below="@+id/etUserName"
+	          android:layout_centerHorizontal="true"
+	          android:layout_marginTop="-2dp"
+	          android:background="@drawable/login_edittext_bottom_bg"
+	          android:hint="@string/password"
+	          android:inputType="textPassword"
+	          android:padding="10dp"
+	          android:textColorHint="#cccccc" />
+
+
+	<Button android:id="@+id/bnEntry"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_alignRight="@+id/etPassword"
+            android:layout_alignEnd="@+id/etPassword"
+            android:layout_below="@+id/etPassword"
+            android:text="@string/entry" 
+            android:background="@drawable/login_button_auth_corners"
+            android:textColor="@android:color/white"
+            android:layout_marginRight="3dp"
+            android:layout_marginEnd="3dp"
+            android:onClick="onClickBnLogin"/>
+
+	<Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/bnEntry"
+            android:layout_alignBottom="@+id/bnEntry"
+            android:layout_alignLeft="@+id/etPassword"
+            android:layout_alignStart="@+id/etPassword"
+            android:text="@string/forgetPassword"
+            android:textColor="@android:color/white" 
+            android:background="@android:color/transparent"
+            android:onClick="onClickBnForgotPassword"/>
+
+	<EditText android:id="@+id/etUserName"
+              android:layout_width="250dp"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:layout_marginTop="220dp"
+              android:background="@drawable/login_edittext_top_bg"
+              android:padding="10dp"
+              android:hint="@string/user"
+              android:textColorHint="#cccccc" />
+
+	<ImageView android:id="@+id/imgRedBorder"
+               android:layout_width="200dp"
+               android:layout_height="40dp"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentStart="true"
+               android:layout_marginTop="163dp"
+               android:src="@drawable/login_fragment_red" 
+               android:contentDescription="@string/none"/>
+
+	<TextView android:id="@+id/lbStartSession"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="25dp"
+              android:layout_marginStart="25dp"
+              android:layout_marginTop="170dp"
+              android:text="@string/startSession"
+              android:textColor="@android:color/white"
+              android:textSize="26sp" />
+
+	<Button android:id="@+id/bnNoAunthEntry"
+	        android:layout_width="220dp"
+	        android:layout_height="40dp"
+	        android:layout_below="@+id/bnEntry"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="34dp"
+	        android:background="@drawable/common_button_blue"
+	        android:onClick="onClickBnRegister"
+	        android:text="@string/registration"
+	        android:textColor="@android:color/white" />
+
+	<com.facebook.widget.LoginButton xmlns:fb="http://schemas.android.com/apk/res-auto"
+	                                 android:id="@+id/bnFbRegistration"
+	                                 android:layout_width="fill_parent"
+	                                 android:layout_height="wrap_content"
+	                                 android:layout_alignLeft="@+id/bnNoAunthEntry"
+	                                 android:layout_alignRight="@+id/bnNoAunthEntry"
+	                                 android:layout_alignEnd="@+id/bnNoAunthEntry"
+	                                 android:layout_alignStart="@+id/bnNoAunthEntry"
+	                                 android:layout_below="@+id/bnNoAunthEntry"
+	                                 android:layout_marginTop="19dp"
+	                                 fb:login_text="Registrarse con Facebook"
+	                                 fb:logout_text="Logout" />
+
+</RelativeLayout>

@@ -1,0 +1,853 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lorant.mobile.android.ui.view.ReportHistorical" >
+
+   <LinearLayout  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+                     
+    <RelativeLayout  android:id="@+id/container_1"  
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvDate_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvTime_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvPolicyNumber_1"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvDate_1"
+        android:layout_marginTop="18dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvEventType_1"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvPolicyNumber_1"
+        android:layout_alignBottom="@+id/tvPolicyNumber_1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
+        android:id="@+id/mapContainer_1"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvPolicyNumber_1"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/report_crash_map_border"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvInformation_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/mapContainer_1"
+        android:layout_marginTop="16dp" 
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"/>
+
+  </RelativeLayout>
+  
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="2dp"
+          android:background="@color/themeDarkGrey" />
+        
+        <RelativeLayout  android:id="@+id/container_2"  
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvDate_2"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvTime_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvPolicyNumber_2"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvDate_2"
+        android:layout_marginTop="18dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvEventType_2"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvPolicyNumber_2"
+        android:layout_alignBottom="@+id/tvPolicyNumber_2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
+        android:id="@+id/mapContainer_2"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvPolicyNumber_2"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/report_crash_map_border"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvInformation_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/mapContainer_2"
+        android:layout_marginTop="16dp" 
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"/>
+
+  </RelativeLayout>
+  
+                <View
+          android:layout_width="match_parent"
+          android:layout_height="2dp"
+          android:background="@color/themeDarkGrey" />
+        
+            <RelativeLayout  android:id="@+id/container_3"  
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvDate_3"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvTime_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvPolicyNumber_3"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvDate_3"
+        android:layout_marginTop="18dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvEventType_3"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvPolicyNumber_3"
+        android:layout_alignBottom="@+id/tvPolicyNumber_3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
+        android:id="@+id/mapContainer_3"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvPolicyNumber_3"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/report_crash_map_border"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvInformation_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/mapContainer_3"
+        android:layout_marginTop="16dp" 
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"/>
+
+  </RelativeLayout>
+  
+                    <View
+          android:layout_width="match_parent"
+          android:layout_height="2dp"
+          android:background="@color/themeDarkGrey" />
+                    
+                <RelativeLayout  android:id="@+id/container_4"  
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvDate_4"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvTime_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvPolicyNumber_4"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvDate_4"
+        android:layout_marginTop="18dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvEventType_4"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvPolicyNumber_4"
+        android:layout_alignBottom="@+id/tvPolicyNumber_4"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
+        android:id="@+id/mapContainer_4"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvPolicyNumber_4"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/report_crash_map_border"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvInformation_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/mapContainer_4"
+        android:layout_marginTop="16dp" 
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"/>
+
+  </RelativeLayout>
+  
+                        <View
+          android:layout_width="match_parent"
+          android:layout_height="2dp"
+          android:background="@color/themeDarkGrey" />
+                        
+                
+    <RelativeLayout  android:id="@+id/container_5"  
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvDate_5"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvTime_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvPolicyNumber_5"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvDate_5"
+        android:layout_marginTop="18dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvEventType_5"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvPolicyNumber_5"
+        android:layout_alignBottom="@+id/tvPolicyNumber_5"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
+        android:id="@+id/mapContainer_5"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvPolicyNumber_5"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/report_crash_map_border"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvInformation_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/mapContainer_5"
+        android:layout_marginTop="16dp" 
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"/>
+
+  </RelativeLayout>
+  
+            <View
+          android:layout_width="match_parent"
+          android:layout_height="2dp"
+          android:background="@color/themeDarkGrey" />
+            
+        <RelativeLayout  android:id="@+id/container_6"  
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvDate_6"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvTime_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvPolicyNumber_6"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvDate_6"
+        android:layout_marginTop="18dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvEventType_6"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvPolicyNumber_6"
+        android:layout_alignBottom="@+id/tvPolicyNumber_6"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
+        android:id="@+id/mapContainer_6"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvPolicyNumber_6"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/report_crash_map_border"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvInformation_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/mapContainer_6"
+        android:layout_marginTop="16dp" 
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"/>
+
+  </RelativeLayout>
+  
+        
+                <View
+          android:layout_width="match_parent"
+          android:layout_height="2dp"
+          android:background="@color/themeDarkGrey" />
+                
+            <RelativeLayout  android:id="@+id/container_7"  
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvDate_7"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvTime_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvPolicyNumber_7"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvDate_7"
+        android:layout_marginTop="18dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvEventType_7"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvPolicyNumber_7"
+        android:layout_alignBottom="@+id/tvPolicyNumber_7"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
+        android:id="@+id/mapContainer_7"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvPolicyNumber_7"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/report_crash_map_border"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvInformation_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/mapContainer_7"
+        android:layout_marginTop="16dp" 
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"/>
+
+  </RelativeLayout>
+  
+            
+                    <View
+          android:layout_width="match_parent"
+          android:layout_height="2dp"
+          android:background="@color/themeDarkGrey" />
+                    
+                <RelativeLayout  android:id="@+id/container_8"  
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvDate_8"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvTime_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvPolicyNumber_8"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvDate_8"
+        android:layout_marginTop="18dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvEventType_8"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvPolicyNumber_8"
+        android:layout_alignBottom="@+id/tvPolicyNumber_8"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
+        android:id="@+id/mapContainer_8"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvPolicyNumber_8"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/report_crash_map_border"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvInformation_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/mapContainer_8"
+        android:layout_marginTop="16dp" 
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"/>
+
+  </RelativeLayout>
+  
+                        <View
+          android:layout_width="match_parent"
+          android:layout_height="2dp"
+          android:background="@color/themeDarkGrey" />
+                        
+                    <RelativeLayout  android:id="@+id/container_9"  
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvDate_9"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvTime_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvPolicyNumber_9"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvDate_9"
+        android:layout_marginTop="18dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvEventType_9"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvPolicyNumber_9"
+        android:layout_alignBottom="@+id/tvPolicyNumber_9"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
+        android:id="@+id/mapContainer_9"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvPolicyNumber_9"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/report_crash_map_border"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvInformation_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/mapContainer_9"
+        android:layout_marginTop="16dp" 
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"/>
+
+  </RelativeLayout>
+  
+                            <View
+          android:layout_width="match_parent"
+          android:layout_height="2dp"
+          android:background="@color/themeDarkGrey" />
+                            
+                        <RelativeLayout  android:id="@+id/container_10"  
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvDate_10"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvTime_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvPolicyNumber_10"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvDate_10"
+        android:layout_marginTop="18dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvEventType_10"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvPolicyNumber_10"
+        android:layout_alignBottom="@+id/tvPolicyNumber_10"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
+        android:id="@+id/mapContainer_10"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvPolicyNumber_10"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/report_crash_map_border"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvInformation_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/mapContainer_10"
+        android:layout_marginTop="16dp" 
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"/>
+
+  </RelativeLayout>
+
+       
+
+    </LinearLayout>
+  
+</RelativeLayout>

@@ -1,0 +1,301 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lorant.mobile.android.ui.view.Registration" >
+
+    <ImageView
+        android:id="@+id/imageViewLogoBack"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/none"
+        android:src="@drawable/common_brand_alpha_white" />
+
+    <RelativeLayout
+        android:id="@+id/rlPolicyNick"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/themeLightGrey" >
+
+        <TextView
+            android:id="@+id/tvPolicyNick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/policyNickNameLb"
+            android:textAppearance="?android:attr/textAppearanceSmall" 
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"/>
+
+        <Spinner
+            android:id="@+id/srPolicyNick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/tvPolicyNick"
+            android:layout_toRightOf="@+id/tvPolicyNick"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:inputType="text" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/vPolicyNick"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rlPolicyNick"
+        android:background="@color/themeDarkGrey" />
+
+    <RelativeLayout
+        android:id="@+id/rlPhone"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/vPolicyNick"
+        android:background="@color/themeLightGrey" >
+
+        <TextView
+            android:id="@+id/tvPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/etPhone"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="@string/cellLabel"
+            android:textAppearance="?android:attr/textAppearanceSmall" 
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"/>
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/tvPhone"
+            android:layout_toRightOf="@+id/tvPhone"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:inputType="phone"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/vPhone"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rlPhone"
+        android:background="@color/themeDarkGrey" />
+
+    <RelativeLayout
+        android:id="@+id/rlInformation"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/vPhone"
+        android:background="@color/themeLightGrey" >
+
+        <TextView
+            android:id="@+id/tvInformation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/informationLabel"
+            android:textAppearance="?android:attr/textAppearanceSmall" 
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"/>
+
+        <EditText
+            android:id="@+id/etInformation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/tvInformation"
+            android:layout_toRightOf="@+id/tvInformation"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:inputType="textMultiLine" 
+            android:focusable="false"
+            android:clickable="true"
+            android:onClick="onClickEtInformation"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/vInformation"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rlInformation"
+        android:background="@color/themeDarkGrey" />
+
+    <RelativeLayout
+        android:id="@+id/rlCause"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/vInformation"
+        android:background="@color/themeLightGrey" >
+
+        <TextView
+            android:id="@+id/tvCause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/causeLabel"
+            android:textAppearance="?android:attr/textAppearanceSmall" 
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"/>
+
+        <Spinner
+            android:id="@+id/spCause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/tvCause"
+            android:layout_toRightOf="@+id/tvCause"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:inputType="text" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/vCause"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rlCause"
+        android:background="@color/themeDarkGrey" />
+
+    <EditText
+        android:id="@+id/etAddres"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tvLocation"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/common_edittext_rounded_corners"
+        android:ems="10"
+        android:focusable="false"
+        android:gravity="center"
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/tvLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlCause"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="10dp"
+        android:text="@string/myLocation"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/themeBlack" />
+
+    <LinearLayout
+        android:id="@+id/mapContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/etAddres"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/report_crash_map_border"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+    </LinearLayout>
+
+    <RelativeLayout android:id="@+id/rlButtons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mapContainer"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp" >
+
+        <Button android:id="@+id/bnTakePhoto"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:background="@drawable/common_button_white"
+                android:drawablePadding="2dip"
+                android:drawableRight="@drawable/report_icon_photo"
+                android:drawableEnd="@drawable/report_icon_photo"
+                android:scaleType="fitXY"
+                android:singleLine="true"
+                android:text="@string/sinisterPhoto"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/black" 
+                android:onClick="onClickBnTakePhoto"
+                android:paddingLeft="5dip"
+                android:paddingStart="5dip"
+                android:paddingRight="10dp"
+                android:paddingEnd="10dp"/>
+        
+        <Button
+            android:id="@+id/bnSendLocation"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@+id/bnTakePhoto"
+            android:layout_alignRight="@+id/bnShare"
+            android:layout_alignEnd="@+id/bnShare" 
+            android:layout_alignStart="@+id/bnTakePhoto"
+            android:layout_below="@+id/bnTakePhoto"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/common_button_green"
+            android:scaleType="fitXY"
+            android:singleLine="true"
+            android:text="@string/call"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" 
+            android:onClick="onClickBnCall"/>
+
+        <Button android:id="@+id/bnShare"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/bnTakePhoto"
+                android:layout_toRightOf="@+id/bnTakePhoto"
+                android:background="@drawable/common_button_white"
+                android:drawableEnd="@drawable/location"
+                android:drawablePadding="2dip"
+                android:drawableRight="@drawable/common_icon_fb"
+                android:scaleType="fitXY"
+                android:singleLine="true"
+                android:text="@string/share"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/black" 
+                android:paddingLeft="25dip"
+                android:paddingStart="25dip" 
+                android:paddingRight="10dp"
+                android:paddingEnd="10dp"
+                android:onClick="onClickBnShare"/>
+    </RelativeLayout>
+
+</RelativeLayout>

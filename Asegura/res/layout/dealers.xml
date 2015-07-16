@@ -1,0 +1,184 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lorant.mobile.android.ui.view.Dealers" 
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <ImageView
+        android:id="@+id/imageViewLogoBack"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/none"
+        android:src="@drawable/common_brand_alpha_white" />
+
+    <RelativeLayout
+        android:id="@+id/rlButtons"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:background="@color/themeLightGrey"
+        android:gravity="center|center">
+
+        <Button
+            android:id="@+id/bnSearchByLocation"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/nearOfYou" 
+            android:background="@drawable/common_button_border_red"
+            android:textColor="@color/themeRed"
+            android:textSize="15sp"
+            android:onClick="onClickBnSearchByLocation"/>
+
+        <Button
+            android:id="@+id/bnSearchByCity"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/bnSearchByLocation"
+            android:layout_toEndOf="@+id/bnSearchByLocation"
+            android:text="@string/searchByCity" 
+            android:background="@drawable/common_button_border_red"
+            android:textColor="@color/themeRed"
+            android:textSize="15sp"
+            android:onClick="onClickBnSearchByCity"/>
+
+    </RelativeLayout>
+
+    <View android:id="@+id/vName"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:layout_below="@+id/rlButtons"
+          android:background="@color/themeDarkGrey" />
+
+    <LinearLayout android:id="@+id/mapContainer"
+                  android:layout_width="wrap_content"
+                  android:layout_height="250dp"
+                  android:layout_alignParentEnd="true"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentRight="true"
+                  android:layout_alignParentStart="true"
+                  android:layout_below="@+id/vName"
+                  android:layout_marginTop="10dp"
+                  android:background="@drawable/report_crash_map_border"
+                  android:orientation="vertical"
+                  android:paddingBottom="5dp"
+                  android:paddingTop="5dp" >
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/llDealerDescription"
+              android:layout_width="fill_parent"
+              android:layout_height="130dp"
+              android:layout_alignParentLeft="true"
+              android:layout_alignParentStart="true"
+              android:layout_below="@+id/mapContainer"
+              android:background="@color/themeLightGrey"
+              android:orientation="vertical" 
+              android:singleLine="false">
+
+        <TextView
+            android:id="@+id/tvDealerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="15dp" 
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:id="@+id/tvDealerAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_marginLeft="5dp"/>
+
+        
+         <LinearLayout 
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/themeLightGrey"
+              android:orientation="horizontal" 
+              android:singleLine="false"
+              android:layout_marginLeft="5dp">
+            <TextView
+                android:id="@+id/tvDealerPhoneLb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phone" 
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:visibility="invisible"/>
+            <TextView
+                android:id="@+id/tvDealerPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+        </LinearLayout>
+        
+        <LinearLayout 
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/themeLightGrey"
+              android:orientation="horizontal" 
+              android:singleLine="false"
+              android:layout_marginLeft="5dp">
+            <TextView
+                android:id="@+id/tvDealerMailLb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mail" 
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:visibility="invisible"/>
+            <TextView
+                android:id="@+id/tvDealerMail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/themeLink"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:clickable="true"
+            android:onClick="onClickTvDealerMail"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    
+    <Button android:id="@+id/bnCall"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/common_button_green"
+            android:onClick="onClickBnCall"
+            android:scaleType="fitXY"
+            android:singleLine="true"
+            android:text="@string/call"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/white" 
+            android:layout_marginBottom="10dp"
+            android:enabled="false"
+            android:layout_below="@+id/llDealerDescription"
+            android:layout_marginTop="10dp"/>
+
+    <Spinner
+        android:id="@+id/spBrand"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" 
+        android:layout_alignParentTop="true" 
+        android:layout_marginLeft="7dp"
+        android:layout_marginStart="7dp"/>
+
+</RelativeLayout>

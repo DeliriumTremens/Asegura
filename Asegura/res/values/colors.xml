@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <color name="themeWhite">#FFFFFF</color>
+   <color name="themeBlack">#000000</color>
+   <color name="themeRed">#ab162b</color>
+   <color name="themeGrey">#232323</color>
+   <color name="themeLightGrey">#DDDDDD</color>
+   <color name="themeDarkGrey">#C7C7C7</color>
+   <color name="themeBlue">#005f71</color>
+   <color name="themeDarkBlue">#003039</color>
+   <color name="themeLightBlue">#BFE4F6</color>
+   <color name="themeGreen">#39B54A</color>
+   <color name="loaderShadow">#80000000</color>
+   <color name="themePink">#E49CE6</color>
+   <color name="themeLink">#24ACF0</color>
+</resources>

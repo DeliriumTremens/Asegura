@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/themeWhite"
+    tools:context="com.lorant.mobile.android.ui.view.Quotation" >
+    
+    <ImageView android:layout_width="200dp"
+               android:layout_height="300dp"
+               android:layout_alignParentBottom="true"
+               android:layout_alignParentEnd="true"
+               android:layout_alignParentRight="true"
+               android:contentDescription="@string/none"
+               android:src="@drawable/common_brand_alpha_white" />
+
+    <TextView android:id="@+id/tv2"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignLeft="@+id/tv1"
+              android:layout_alignStart="@+id/tv1"
+              android:layout_below="@+id/tv1"
+              android:layout_marginTop="50dp"
+              android:text="@string/quoatation_2"
+              android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView android:id="@+id/tvPhone"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignBottom="@+id/tv2"
+              android:layout_toRightOf="@+id/tv2"
+              android:layout_toEndOf="@+id/tv2"
+              android:layout_marginLeft="5dp"
+              android:layout_marginStart="5dp"
+              android:text="@string/quoatationPhone"
+              android:textAppearance="?android:attr/textAppearanceLarge" 
+              android:textColor="@color/themeBlue"
+              android:clickable="true"
+              android:onClick="onClickTvPhone"/>
+
+    <TextView android:id="@+id/tv1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentTop="true"
+              android:layout_centerHorizontal="true"
+              android:layout_marginTop="60dp"
+              android:text="@string/quoatation_1"
+              android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView android:id="@+id/TextView01"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignLeft="@+id/tv1"
+              android:layout_alignStart="@+id/tv1"
+              android:layout_below="@+id/tv1"
+              android:text="@string/quoatation_3"
+              android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView android:id="@+id/tv3"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignBottom="@+id/tvPhone"
+              android:layout_toRightOf="@+id/tvPhone"
+              android:layout_toEndOf="@+id/tvPhone"
+              android:text="@string/quoatation_4"
+              android:textAppearance="?android:attr/textAppearanceMedium" 
+              android:layout_marginLeft="5dp"
+              android:layout_marginStart="5dp"/>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/tvPhone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52dp"
+        android:src="@drawable/quotation_phone" 
+        android:contentDescription="@string/none"/>
+    
+</RelativeLayout>

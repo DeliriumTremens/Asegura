@@ -1,0 +1,256 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.lorant.mobile.android.ui.view.PolicyMenu" >
+
+    <ImageView android:id="@+id/imageViewLogoBack"
+               android:layout_width="200dp"
+               android:layout_height="300dp"
+               android:layout_alignParentBottom="true"
+               android:layout_alignParentEnd="true"
+               android:layout_alignParentRight="true"
+               android:layout_marginBottom="15dp"
+               android:contentDescription="@string/none"
+               android:src="@drawable/common_brand_alpha_white" />
+
+    <RelativeLayout android:id="@+id/rlCars"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/themeRed" 
+                    android:clickable="true"
+                    android:onClick="onClickNewAssurance"
+                    android:tag="car">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentTop="true"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginTop="12dp"
+                  android:text="@string/cars"
+                  android:textAppearance="?android:attr/textAppearanceSmall"
+                  android:textColor="@android:color/white" />
+
+        <ImageView android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:layout_alignParentBottom="true"
+                   android:layout_centerHorizontal="true"
+                   android:layout_marginBottom="3dp"
+                   android:scaleType="fitXY"
+                   android:src="@drawable/assurance_menu_car" 
+                   android:contentDescription ="@string/none"/>
+    </RelativeLayout>
+
+    <RelativeLayout android:id="@+id/rlHome"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignTop="@+id/rlCars"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/themeRed" 
+                    android:onClick="onClickNewAssurance"
+                    android:tag="home">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentTop="true"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginTop="12dp"
+                  android:text="@string/home"
+                  android:textAppearance="?android:attr/textAppearanceSmall"
+                  android:textColor="@android:color/white" />
+
+        <ImageView android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:layout_alignParentBottom="true"
+                   android:layout_centerHorizontal="true"
+                   android:layout_marginBottom="3dp"
+                   android:scaleType="fitXY"
+                   android:src="@drawable/assurance_menu_home" 
+                   android:contentDescription ="@string/none"/>
+    </RelativeLayout>
+
+    <RelativeLayout android:id="@+id/rlLife"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@+id/rlHome"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@color/themeRed" 
+                    android:onClick="onClickNewAssurance"
+                    android:tag="life">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentTop="true"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginTop="12dp"
+                  android:text="@string/life"
+                  android:textAppearance="?android:attr/textAppearanceSmall"
+                  android:textColor="@android:color/white" />
+
+        <ImageView android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:layout_alignParentBottom="true"
+                   android:layout_centerHorizontal="true"
+                   android:layout_marginBottom="3dp"
+                   android:scaleType="fitXY"
+                   android:src="@drawable/assurance_menu_life" 
+                   android:contentDescription ="@string/none"/>
+    </RelativeLayout>
+
+    <RelativeLayout android:id="@+id/rlMedical"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignLeft="@+id/rlCars"
+                    android:layout_alignStart="@+id/rlCars"
+                    android:layout_below="@+id/rlCars"
+                    android:background="@color/themeRed"
+                    android:layout_marginTop="30dp" 
+                    android:onClick="onClickNewAssurance"
+                    android:tag="medical">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentTop="true"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginTop="5dp"
+                  android:gravity="center"
+                  android:text="@string/doctor"
+                  android:textAppearance="?android:attr/textAppearanceSmall"
+                  android:textColor="@android:color/white" 
+                  android:singleLine="false"/>
+
+        <ImageView android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:layout_alignParentBottom="true"
+                   android:layout_centerHorizontal="true"
+                   android:scaleType="fitXY"
+                   android:src="@drawable/assurance_menu_doctor" 
+                   android:contentDescription ="@string/none"/>
+    </RelativeLayout>
+
+    <RelativeLayout android:id="@+id/rlEducation"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignLeft="@+id/rlHome"
+                    android:layout_alignStart="@+id/rlHome"
+                    android:layout_below="@+id/rlHome"
+                    android:background="@color/themeRed" 
+                    android:layout_marginTop="30dp"
+                    android:onClick="onClickNewAssurance"
+                    android:tag="education">
+
+        <TextView android:id="@+id/TextView05"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentTop="true"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginTop="12dp"
+                  android:text="@string/education"
+                  android:textAppearance="?android:attr/textAppearanceSmall"
+                  android:textColor="@android:color/white" />
+
+        <ImageView android:id="@+id/ImageView05"
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:layout_alignParentBottom="true"
+                   android:layout_centerHorizontal="true"
+                   android:layout_marginBottom="3dp"
+                   android:scaleType="fitXY"
+                   android:src="@drawable/assurance_menu_education" 
+                   android:contentDescription ="@string/none"/>
+    </RelativeLayout>
+
+    <RelativeLayout android:id="@+id/rlPets"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignLeft="@+id/rlLife"
+                    android:layout_alignStart="@+id/rlLife"
+                    android:layout_below="@+id/rlLife"
+                    android:background="@color/themeRed" 
+                    android:layout_marginTop="30dp"
+                    android:onClick="onClickNewAssurance"
+                    android:tag="pet">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentTop="true"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginTop="12dp"
+                  android:text="@string/pets"
+                  android:textAppearance="?android:attr/textAppearanceSmall"
+                  android:textColor="@android:color/white" />
+
+        <ImageView android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:layout_alignParentBottom="true"
+                   android:layout_centerHorizontal="true"
+                   android:layout_marginBottom="3dp"
+                   android:scaleType="fitXY"
+                   android:src="@drawable/assurance_menu_pet" 
+                   android:contentDescription ="@string/none"/>
+    </RelativeLayout>
+
+    <RelativeLayout android:id="@+id/rlOthers"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignLeft="@+id/rlMedical"
+                    android:layout_alignStart="@+id/rlMedical"
+                    android:layout_below="@+id/rlMedical"
+                    android:background="@color/themeRed" 
+                    android:layout_marginTop="30dp"
+                    android:onClick="onClickNewAssurance"
+                    android:tag="other">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentTop="true"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginTop="12dp"
+                  android:text="@string/others"
+                  android:textAppearance="?android:attr/textAppearanceSmall"
+                  android:textColor="@android:color/white" />
+
+        <ImageView android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:layout_alignParentBottom="true"
+                   android:layout_centerHorizontal="true"
+                   android:layout_marginBottom="3dp"
+                   android:scaleType="fitXY"
+                   android:src="@drawable/assurance_menu_other" 
+                   android:contentDescription ="@string/none"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bnTakeQR"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/common_button_light_grey"
+        android:drawableEnd="@drawable/assurance_menu_icon_qr"
+        android:drawableRight="@drawable/assurance_menu_icon_qr"
+        android:onClick="onClickBnTakeQR"
+        android:paddingEnd="15dp"
+        android:paddingLeft="30dip"
+        android:paddingRight="15dp"
+        android:paddingStart="30dip"
+        android:scaleType="fitXY"
+        android:singleLine="true"
+        android:text="@string/useQR"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@android:color/black"
+        android:visibility="invisible" />
+
+</RelativeLayout>

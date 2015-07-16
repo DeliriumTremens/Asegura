@@ -1,0 +1,803 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lorant.mobile.android.ui.view.Registration" 
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <ImageView android:id="@+id/imageViewLogoBack"
+               android:layout_width="200dp"
+               android:layout_height="300dp"
+               android:layout_alignParentBottom="true"
+               android:layout_alignParentEnd="true"
+               android:layout_alignParentRight="true"
+               android:contentDescription="@string/none"
+               android:src="@drawable/common_brand_alpha_white" />
+    
+         <RelativeLayout android:id="@+id/rlAssuranceNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/themeLightGrey" >
+
+        <TextView android:id="@+id/tvAssuranceNumber"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignBottom="@+id/etAssuranceNumber"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentStart="true"
+                  android:text="@string/assuranceNumberLbl"
+                  android:textAppearance="?android:attr/textAppearanceSmall" 
+                  android:layout_marginLeft="7dp"
+                  android:layout_marginStart="7dp"/>
+        
+        <EditText
+            android:id="@+id/etAssuranceNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/tvAssuranceNumber"
+            android:layout_toRightOf="@+id/tvAssuranceNumber"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:inputType="number" />
+
+    </RelativeLayout>
+    
+    <View android:id="@+id/vSeparator01"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/themeDarkGrey" 
+          android:layout_below="@+id/rlAssuranceNumber"/>
+    
+    
+    <RelativeLayout android:id="@+id/rlPolicyName"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/vSeparator01"
+                    android:background="@color/themeLightGrey" >
+
+        <TextView
+            android:id="@+id/tvPolicyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/nickNameLb"
+            android:textAppearance="?android:attr/textAppearanceSmall" 
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"/>
+
+        <EditText android:id="@+id/etPolicyName"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentEnd="true"
+                  android:layout_alignParentRight="true"
+                  android:layout_centerVertical="true"
+                  android:layout_toEndOf="@+id/tvPolicyName"
+                  android:layout_toRightOf="@+id/tvPolicyName"
+                  android:ems="10"
+                  android:inputType="text" 
+                  android:background="@android:color/transparent"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginStart="5dp"
+                  />
+
+    </RelativeLayout>
+
+    <View android:id="@+id/vSeparator1"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/themeDarkGrey" 
+          android:layout_below="@+id/rlPolicyName"/>
+    
+    
+    <RelativeLayout android:id="@+id/rlAssuranceName"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/vSeparator1"
+                    android:background="@color/themeLightGrey" >
+
+        <TextView
+            android:id="@+id/tvAssuranceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/assuranceLbl"
+            android:textAppearance="?android:attr/textAppearanceSmall" 
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"/>
+
+        <Spinner android:id="@+id/srAssuranceName"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentEnd="true"
+                  android:layout_alignParentRight="true"
+                  android:layout_centerVertical="true"
+                  android:layout_toEndOf="@+id/tvAssuranceName"
+                  android:layout_toRightOf="@+id/tvAssuranceName"
+                  android:ems="10"
+                  android:inputType="text" 
+                  android:background="@android:color/transparent"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginStart="5dp"
+                  />
+
+    </RelativeLayout>
+
+    
+    <View android:id="@+id/vSeparator3"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/themeDarkGrey" 
+          android:layout_below="@+id/rlAssuranceName"/>
+        
+    <RelativeLayout android:id="@+id/rlOwnerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/vSeparator3"
+                    android:background="@color/themeLightGrey" >
+        
+
+        <TextView android:id="@+id/tvOwnerName"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentStart="true"
+                  android:text="@string/ownerNameLbl"
+                  android:textAppearance="?android:attr/textAppearanceSmall" 
+                  android:layout_marginLeft="7dp"
+                  android:layout_marginStart="7dp"/>
+        
+        <EditText android:id="@+id/etOwnerName"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentRight="true"
+                  android:layout_alignParentEnd="true"
+                  android:layout_centerVertical="true"
+                  android:layout_toRightOf="@+id/tvOwnerName"
+                  android:layout_toEndOf="@+id/tvOwnerName"
+                  android:ems="10" 
+                  android:inputType="text"
+                  android:background="@android:color/transparent"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginStart="5dp"
+                  />
+    </RelativeLayout>
+
+    <View android:id="@+id/vSeparator4"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/themeDarkGrey" 
+          android:layout_below="@+id/rlOwnerName"/>
+        
+    <RelativeLayout android:id="@+id/rlOwnerPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/vSeparator4"
+                    android:background="@color/themeLightGrey" >
+
+
+        <TextView android:id="@+id/tvOwnerPhone"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentStart="true"
+                  android:text="@string/ownerPhoneLbl"
+                  android:textAppearance="?android:attr/textAppearanceSmall" 
+                  android:layout_marginLeft="7dp"
+                  android:layout_marginStart="7dp"/>
+        
+        <EditText android:id="@+id/etOwnerPhone"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentRight="true"
+                  android:layout_alignParentEnd="true"
+                  android:layout_centerVertical="true"
+                  android:layout_toRightOf="@+id/tvOwnerPhone"
+                  android:layout_toEndOf="@+id/tvOwnerPhone" 
+                  android:ems="10" 
+                  android:inputType="phone"
+                  android:background="@android:color/transparent"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginStart="5dp"
+                  />
+        
+    </RelativeLayout>
+
+    
+    <View android:id="@+id/vSeparator5"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/themeDarkGrey" 
+          android:layout_below="@+id/rlOwnerPhone"/>
+    
+    <RelativeLayout android:id="@+id/rlOwnerMail"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/vSeparator5"
+                    android:background="@color/themeLightGrey" >
+
+        <TextView android:id="@+id/tvOwnerMail"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentStart="true"
+                  android:text="@string/ownerMailLbl"
+                  android:textAppearance="?android:attr/textAppearanceSmall" 
+                  android:layout_marginLeft="7dp"
+                  android:layout_marginStart="7dp"/>
+        
+        <EditText android:id="@+id/etOwnerMail"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentRight="true"
+                  android:layout_alignParentEnd="true"
+                  android:layout_centerVertical="true"
+                  android:layout_toRightOf="@+id/tvOwnerMail"
+                  android:layout_toEndOf="@+id/tvOwnerMail"
+                  android:inputType="textEmailAddress"
+                  android:ems="10" 
+                  android:background="@android:color/transparent"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginStart="5dp"
+                  />
+
+    </RelativeLayout>
+    
+    
+    
+    
+    <View android:id="@+id/vSeparator232"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/themeDarkGrey" 
+          android:layout_below="@+id/rlOwnerMail"/>
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <RelativeLayout
+        android:id="@+id/rlDates"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/vSeparator232"
+        android:background="@color/themeWhite" >
+
+        <TextView
+            android:id="@+id/tvStartPeriod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/startPeriodLbl"
+            android:textAppearance="?android:attr/textAppearanceSmall" 
+            android:textColor="@color/themeRed"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"/>
+
+        <EditText
+            android:id="@+id/etStartDate"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tvStartPeriod" 
+            android:layout_toEndOf="@+id/tvStartPeriod"
+            android:inputType="date"
+            android:textSize="14sp"
+            android:gravity="center"
+            />
+        
+        <TextView
+            android:id="@+id/tvEndDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/etStartDate" 
+            android:layout_toEndOf="@+id/etStartDate"
+            android:layout_centerVertical="true"
+            android:text="@string/endPeriodLbl"
+            android:textAppearance="?android:attr/textAppearanceSmall" 
+            android:textColor="@color/themeRed"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"/>
+
+        <EditText
+            android:id="@+id/etEndDate"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tvEndDate" 
+            android:layout_toEndOf="@+id/tvEndDate"
+            android:inputType="date"
+            android:textSize="14sp"
+            android:gravity="center"
+            />
+       
+    </RelativeLayout>
+    
+
+    <RelativeLayout
+        android:id="@+id/rlAlert"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/rlDates"
+        android:background="@color/themeWhite" >
+
+
+        <Switch
+            android:id="@+id/swRemember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/rememberEndLbl" 
+            android:layout_centerVertical="true"
+            />
+       
+    </RelativeLayout>
+    
+    
+    
+    
+    
+    
+
+    <View android:id="@+id/vSeparator7"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/themeDarkGrey" 
+          android:layout_below="@+id/rlAlert"/>
+          
+    <RelativeLayout
+        android:id="@+id/rlPaymentType"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/vSeparator7"
+        android:background="@color/themeLightGrey" >
+
+        <TextView
+            android:id="@+id/tvPaymentType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/paymentNameLbl"
+            android:textAppearance="?android:attr/textAppearanceSmall" 
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"/>
+
+        <EditText
+            android:id="@+id/etPaymentType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/tvPaymentType"
+            android:layout_toRightOf="@+id/tvPaymentType"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:inputType="text" 
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            />
+    </RelativeLayout>
+    
+    <View android:id="@+id/vSeparator8"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/themeDarkGrey" 
+          android:layout_below="@+id/rlPaymentType"/>
+    
+    <RelativeLayout
+        android:id="@+id/rlSellerName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/vSeparator8"
+        android:background="@color/themeLightGrey" >
+
+        <TextView
+            android:id="@+id/tvSellerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/sellerNameLbl"
+            android:textAppearance="?android:attr/textAppearanceSmall" 
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"/>
+
+        <EditText
+            android:id="@+id/etSellerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/tvSellerName"
+            android:layout_toRightOf="@+id/tvSellerName"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:inputType="text" 
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            />
+    </RelativeLayout>
+    
+    <View android:id="@+id/vSeparator9"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/themeDarkGrey" 
+          android:layout_below="@+id/rlSellerName"/>
+    
+    <RelativeLayout
+        android:id="@+id/rlKit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/vSeparator9"
+        android:background="@color/themeLightGrey" >
+
+        <TextView
+            android:id="@+id/tvProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/productNameLbl"
+            android:textAppearance="?android:attr/textAppearanceSmall" 
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"/>
+
+        <EditText
+            android:id="@+id/etProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tvProduct"
+            android:layout_toEndOf="@+id/tvProduct"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:inputType="text" 
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"/>
+    </RelativeLayout>
+    
+    
+    
+    <View android:id="@+id/vSeparator932"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/themeDarkGrey" 
+          android:layout_below="@+id/rlKit"/>
+    
+    
+     
+     <RelativeLayout android:id="@+id/rlDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/vSeparator932"
+                    android:background="@color/themeLightGrey" >
+
+        <TextView android:id="@+id/tvDescription"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignBottom="@+id/etDescription"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentStart="true"
+                  android:text="@string/descripcionLb"
+                  android:textAppearance="?android:attr/textAppearanceSmall" 
+                  android:layout_marginLeft="7dp"
+                  android:layout_marginStart="7dp"/>
+        
+        <EditText android:id="@+id/etDescription"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:layout_toRightOf="@+id/tvDescription"
+                  android:layout_toEndOf="@+id/tvDescription"
+                  android:layout_alignParentRight="true"
+                  android:layout_alignParentEnd="true"
+                  android:ems="10" 
+                  android:inputType="text"
+                  android:background="@android:color/transparent"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginStart="5dp"/>
+
+    </RelativeLayout>
+    
+    
+    
+    <View android:id="@+id/vSeparator2"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/themeDarkGrey" 
+          android:layout_below="@+id/rlDescription"/>
+    
+    
+     <RelativeLayout android:id="@+id/rlSerialNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/vSeparator2"
+                    android:background="@color/themeLightGrey" >
+
+        <TextView android:id="@+id/tvSerialNumber"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignBottom="@+id/etSerialNumber"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentStart="true"
+                  android:text="@string/serialNumberLbl"
+                  android:textAppearance="?android:attr/textAppearanceSmall" 
+                  android:layout_marginLeft="7dp"
+                  android:layout_marginStart="7dp"/>
+        
+        <EditText android:id="@+id/etSerialNumber"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:layout_toRightOf="@+id/tvSerialNumber"
+                  android:layout_toEndOf="@+id/tvSerialNumber"
+                  android:layout_alignParentRight="true"
+                  android:layout_alignParentEnd="true"
+                  android:ems="10" 
+                  android:inputType="text"
+                  android:background="@android:color/transparent"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginStart="5dp"/>
+
+    </RelativeLayout>
+    
+    <View android:id="@+id/vSeparator0"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/themeDarkGrey" 
+          android:layout_below="@+id/rlSerialNumber"/>
+    
+    <RelativeLayout android:id="@+id/rlPlates"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/vSeparator0"
+                    android:background="@color/themeLightGrey" >
+
+        
+
+        <TextView android:id="@+id/tvPlates"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentStart="true"
+                  android:text="@string/platesLbl"
+                  android:textAppearance="?android:attr/textAppearanceSmall" 
+                  android:layout_marginLeft="7dp"
+                  android:layout_marginStart="7dp"/>
+        
+        <EditText android:id="@+id/etPlates"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentRight="true"
+                  android:layout_alignParentEnd="true"
+                  android:layout_centerVertical="true"
+                  android:layout_toRightOf="@+id/tvPlates"
+                  android:layout_toEndOf="@+id/tvPlates"
+                  android:ems="10" 
+                  android:inputType="text"
+                  android:background="@android:color/transparent"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginStart="5dp"
+                  />
+        
+    </RelativeLayout>
+    
+
+   <View android:id="@+id/vSeparator6"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/themeDarkGrey" 
+          android:layout_below="@+id/rlPlates"/>
+   
+   
+    
+    <RelativeLayout
+        android:id="@+id/rlDetails"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/rlPlates"
+        android:background="@color/themeRed" 
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/detailsLbl"
+            android:textAppearance="?android:attr/textAppearanceLarge" 
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:textColor="@color/themeWhite"/>
+
+    </RelativeLayout>
+    
+    <LinearLayout android:id="@+id/llDetails"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentStart="true"
+                  android:layout_below="@+id/rlDetails"
+                  android:orientation="vertical" >
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:id="@+id/rlCoverage"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/llDetails"
+        android:background="@color/themeRed" 
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvCoverage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/coveragesLbl"
+            android:textAppearance="?android:attr/textAppearanceLarge" 
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:textColor="@color/themeWhite"/>
+
+    </RelativeLayout>
+    
+    <LinearLayout android:id="@+id/llCoverages"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentStart="true"
+                  android:layout_below="@+id/rlCoverage"
+                  android:orientation="vertical" >
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bnPhoto"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/bnMoreInformation"
+        android:layout_alignStart="@+id/bnMoreInformation"
+        android:layout_below="@+id/llCoverages"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/common_button_light_grey"
+        android:drawableEnd="@drawable/report_icon_photo"
+        android:drawablePadding="2dip"
+        android:drawableRight="@drawable/report_icon_photo"
+        android:onClick="onClickBnPhoto"
+        android:paddingEnd="15dp"
+        android:paddingLeft="25dip"
+        android:paddingRight="15dp"
+        android:paddingStart="25dip"
+        android:scaleType="fitXY"
+        android:singleLine="true"
+        android:text="@string/uploadAssurance"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@android:color/black" 
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/bnMoreInformation"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/bnPhoto"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/common_button_light_grey"
+        android:drawableEnd="@drawable/common_add_icon"
+        android:drawableRight="@drawable/common_add_icon"
+        android:onClick="onClickBnMoreInformation"
+        android:paddingEnd="15dp"
+        android:paddingLeft="25dip"
+        android:paddingRight="15dp"
+        android:paddingStart="25dip"
+        android:scaleType="fitXY"
+        android:singleLine="true"
+        android:text="@string/moreInformation"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@android:color/black" 
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/bnSave"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/bnMoreInformation"
+        android:layout_alignStart="@+id/bnMoreInformation"
+        android:layout_below="@+id/bnMoreInformation"
+        android:background="@drawable/common_button_red"
+        android:drawableEnd="@drawable/location"
+        android:drawablePadding="2dip"
+        android:drawableRight="@drawable/common_icon_next"
+        android:gravity="center"
+        android:onClick="onClickBnSave"
+        android:paddingEnd="20dip"
+        android:paddingLeft="30dip"
+        android:paddingRight="20dip"
+        android:paddingStart="30dip"
+        android:scaleType="fitXY"
+        android:singleLine="true"
+        android:text="@string/saveAndContinue"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@android:color/white" 
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"/>
+
+</RelativeLayout>

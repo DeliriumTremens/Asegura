@@ -1,0 +1,325 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lorant.mobile.android.ui.view.Registration" 
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <ImageView android:id="@+id/imageViewLogoBack"
+               android:layout_width="200dp"
+               android:layout_height="300dp"
+               android:layout_alignParentBottom="true"
+               android:layout_alignParentEnd="true"
+               android:layout_alignParentRight="true"
+               android:contentDescription="@string/none"
+               android:src="@drawable/common_brand_alpha_white" />
+
+    <View
+        android:id="@+id/vName"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/themeDarkGrey" />
+    
+    <View
+        android:id="@+id/vLastName"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/vName"
+        android:background="@color/themeDarkGrey" />
+
+    <RelativeLayout android:id="@+id/rlMiddleName"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/vLastName"
+                    android:background="@color/themeLightGrey" >
+
+        <TextView android:id="@+id/tvPaymentInstrument"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentStart="true"
+                  android:text="@string/paymentInstrumentationLb"
+                  android:textAppearance="?android:attr/textAppearanceSmall" 
+                  android:layout_marginLeft="7dp"
+                  android:layout_marginStart="7dp" />
+
+        <Spinner android:id="@+id/srPaymentInstrument"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:layout_alignParentRight="true"
+                  android:layout_alignParentEnd="true"
+                  android:layout_toRightOf="@+id/tvPaymentInstrument"
+                  android:layout_toEndOf="@+id/tvPaymentInstrument"
+                  android:ems="10"
+                  android:inputType="text"
+                  android:background="@android:color/transparent"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginStart="5dp"/>
+
+    </RelativeLayout>
+
+    <View android:id="@+id/vMiddleName"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/themeDarkGrey" 
+          android:layout_below="@+id/rlMiddleName"/>
+    
+    <RelativeLayout android:id="@+id/rlMail"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/vMiddleName"
+                    android:background="@color/themeLightGrey" >
+
+        
+
+        <TextView android:id="@+id/tvBank"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentStart="true"
+                  android:text="@string/bankLb"
+                  android:textAppearance="?android:attr/textAppearanceSmall" 
+                  android:layout_marginLeft="7dp"
+                  android:layout_marginStart="7dp"/>
+        
+        <Spinner android:id="@+id/srBank"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentRight="true"
+                  android:layout_alignParentEnd="true"
+                  android:layout_centerVertical="true"
+                  android:layout_toRightOf="@+id/tvBank"
+                  android:layout_toEndOf="@+id/tvBank"
+                  android:ems="10" 
+                  android:inputType="text"
+                  android:background="@android:color/transparent"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginStart="5dp"/>
+        
+    </RelativeLayout>
+
+    
+    <View android:id="@+id/vMail"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/themeDarkGrey" 
+          android:layout_below="@+id/rlMail"/>
+        
+    <RelativeLayout android:id="@+id/rlPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/vMail"
+                    android:background="@color/themeLightGrey" >
+        
+
+        <TextView android:id="@+id/tvPaymentDay"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentStart="true"
+                  android:text="@string/paymentDaysLb"
+                  android:textAppearance="?android:attr/textAppearanceSmall" 
+                  android:layout_marginLeft="7dp"
+                  android:layout_marginStart="7dp"/>
+        
+        <EditText android:id="@+id/etPaymentDay"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentRight="true"
+                  android:layout_alignParentEnd="true"
+                  android:layout_centerVertical="true"
+                  android:layout_toRightOf="@+id/tvPaymentDay"
+                  android:layout_toEndOf="@+id/tvPaymentDay"
+                  android:ems="10" 
+                  android:inputType="number"
+                  android:maxLength="2"
+                  android:background="@android:color/transparent"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginStart="5dp"/>
+    </RelativeLayout>
+
+    <View android:id="@+id/vPhone"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/themeDarkGrey" 
+          android:layout_below="@+id/rlPhone"/>
+        
+    <RelativeLayout android:id="@+id/rlPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/vPhone"
+                    android:background="@color/themeLightGrey" >
+
+
+        <TextView android:id="@+id/tvComments"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentStart="true"
+                  android:text="@string/observationsLb"
+                  android:textAppearance="?android:attr/textAppearanceSmall" 
+                  android:layout_marginLeft="7dp"
+                  android:layout_marginStart="7dp"/>
+        
+        <EditText
+            android:id="@+id/etComments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/tvComments"
+            android:layout_toRightOf="@+id/tvComments"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:singleLine="false"
+            android:gravity="top"
+            android:lines="6"/>
+        
+    </RelativeLayout>
+
+    
+    <View android:id="@+id/vPassword"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/themeDarkGrey" 
+          android:layout_below="@+id/rlPassword"/>
+    
+    <RelativeLayout android:id="@+id/rlRepeatPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/vPassword"
+                    android:background="@color/themeLightGrey" >
+
+        <TextView android:id="@+id/tvRememberFrom"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentStart="true"
+                  android:text="@string/rememberFromLb"
+                  android:textAppearance="?android:attr/textAppearanceSmall" 
+                  android:layout_marginLeft="7dp"
+                  android:layout_marginStart="7dp"/>
+
+        <TextView
+            android:id="@+id/tvRememberTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvRememberFrom"
+            android:layout_marginLeft="100dp"
+            android:layout_marginStart="100dp"
+            android:layout_toRightOf="@+id/tvRememberFrom"
+            android:layout_toEndOf="@+id/tvRememberFrom"
+            android:text="@string/toLb" />
+
+        <EditText
+            android:id="@+id/etRememberFrom"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvRememberFrom"
+            android:layout_toRightOf="@+id/tvRememberFrom"
+            android:layout_toEndOf="@+id/tvRememberFrom" 
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textSize="14sp"/>
+
+        <EditText
+            android:id="@+id/etRememberTo"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tvRememberTo"
+            android:layout_alignBottom="@+id/tvRememberTo"
+            android:layout_toRightOf="@+id/tvRememberTo"
+            android:layout_toEndOf="@+id/tvRememberTo"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textSize="14sp"/>
+
+    </RelativeLayout>
+
+   <View android:id="@+id/vRepeatPassword"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/themeDarkGrey" 
+          android:layout_below="@+id/rlRepeatPassword"/>
+        
+    <Button android:id="@+id/ibSave"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="13dp"
+            android:background="@drawable/common_button_red"
+            android:drawableEnd="@drawable/location"
+            android:drawablePadding="2dip"
+            android:drawableRight="@drawable/common_icon_next"
+            android:gravity="center"
+            android:paddingEnd="20dip"
+            android:paddingLeft="30dip"
+            android:paddingRight="20dip"
+            android:paddingStart="30dip"
+            android:scaleType="fitXY"
+            android:singleLine="true"
+            android:text="@string/saveAndContinue"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/white" 
+            android:onClick="onClickIbSave"/>
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout01"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/vRepeatPassword"
+        android:background="@color/themeWhite" >
+
+        <Switch
+            android:id="@+id/swRememberPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/rememberPaymentDaysLb"
+            android:layout_marginLeft="7dp" 
+            android:layout_marginStart="7dp"/>
+       
+    </RelativeLayout>
+    
+       <View android:id="@+id/view3"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/themeDarkGrey" 
+          android:layout_below="@+id/RelativeLayout01"/>
+
+</RelativeLayout>
